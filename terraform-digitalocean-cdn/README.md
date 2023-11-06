@@ -46,7 +46,7 @@ This example demonstrates how to create various DIGITALOCEAN resources using the
 
 ## Module Inputs
 
-- 'source': The source of the cdn module.
+- 'source' The source of the cdn module.
 - 'ttl' - The time to live for the CDN Endpoint, in seconds.
 - 'region' The fully qualified domain name, (FQDN) for a Space.
 - 'acl' -Canned ACL applied on bucket creation.
