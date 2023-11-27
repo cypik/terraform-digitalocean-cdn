@@ -23,7 +23,7 @@ You can use this module in your Terraform configuration like this:
 
 module "cdn" {
   depends_on       = [module.spaces]
-  source           = "git::https://github.com/opz0/terraform-digitalocean-cdn.git?ref=v1.0.0"
+  source           = "git::https://github.com/cypik/terraform-digitalocean-cdn.git?ref=v1.0.0"
   origin           = module.spaces.bucket_domain_name
   ttl              = 3600
   custom_domain    = null
@@ -37,7 +37,7 @@ Please replace "your_database_cluster_id" with the actual ID of your DigitalOcea
 You can use this module in your Terraform configuration like this:
 ```hcl
 module "cdn" {
-  source = "git::https://github.com/opz0/terraform-digitalocean-cdn.git?ref=v1.0.0"
+  source = "git::https://github.com/cypik/terraform-digitalocean-cdn.git?ref=v1.0.0"
   origin = module.spaces.bucket_domain_name
   ttl    = 3600
 }
@@ -64,10 +64,10 @@ This module does not produce any outputs. It is primarily used for labeling reso
 - 'custom_domain' The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the 'examples' directory within this repository.
+For detailed examples on how to use this module, please refer to the '[examples](https://github.com/cypik/terraform-digitalocean-cdn/blob/master/example)' directory within this repository.
 
 ## License
-This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/opz0/terraform-digitalocean-cdn/blob/master/LICENSE) file for more details.
+This Terraform module is provided under the '[License Name]' License. Please see the [LICENSE](https://github.com/cypik/terraform-digitalocean-cdn/blob/master/LICENSE) file for more details.
 
 ## Author
 Your Name
