@@ -6,7 +6,8 @@ provider "digitalocean" {
 ## spaces module call
 ##------------------------------------------------
 module "spaces" {
-  source        = "git::https://github.com/cypik/terraform-digitalocean-spaces.git?ref=v1.0.0"
+  source        = "cypik/spaces/digitalocean"
+  version       = "1.0.1"
   name          = "classmet-rest"
   acl           = "private"
   force_destroy = false
