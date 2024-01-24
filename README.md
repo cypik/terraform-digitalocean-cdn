@@ -39,10 +39,10 @@ Please replace "your_database_cluster_id" with the actual ID of your DigitalOcea
 You can use this module in your Terraform configuration like this:
 ```hcl
 module "cdn" {
-  source = "cypik/cdn/digitalocean"
+  source  = "cypik/cdn/digitalocean"
   version = "1.0.1"
-  origin = module.spaces.bucket_domain_name
-  ttl    = 3600
+  origin  = module.spaces.bucket_domain_name
+  ttl     = 3600
 }
 ```
 This example demonstrates how to create various DIGITALOCEAN resources using the provided modules. Adjust the input values to suit your specific requirements.
