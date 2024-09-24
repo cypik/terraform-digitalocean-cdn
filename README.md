@@ -25,7 +25,7 @@ You can use this module in your Terraform configuration like this:
 module "cdn" {
   depends_on       = [module.spaces]
   source           = "cypik/cdn/digitalocean"
-  version          = "1.0.1"
+  version          = "1.0.2"
   origin           = module.spaces.bucket_domain_name
   ttl              = 3600
   custom_domain    = null
@@ -40,7 +40,7 @@ You can use this module in your Terraform configuration like this:
 ```hcl
 module "cdn" {
   source  = "cypik/cdn/digitalocean"
-  version = "1.0.1"
+  version = "1.0.2"
   origin  = module.spaces.bucket_domain_name
   ttl     = 3600
 }
@@ -64,14 +64,14 @@ This Terraform module is provided under the **MIT** License. Please see the [LIC
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.34.1 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_digitalocean"></a> [digitalocean](#requirement\_digitalocean) | >= 2.40.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.34.1 |
+| <a name="provider_digitalocean"></a> [digitalocean](#provider\_digitalocean) | >= 2.40.0 |
 
 ## Modules
 
@@ -97,6 +97,7 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_certificate_id"></a> [certificate\_id](#output\_certificate\_id) | The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided. |
 | <a name="output_created_at"></a> [created\_at](#output\_created\_at) | The date and time when the CDN Endpoint was created. |
 | <a name="output_custom_domain"></a> [custom\_domain](#output\_custom\_domain) | The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint. |
 | <a name="output_endpoint"></a> [endpoint](#output\_endpoint) | The fully qualified domain name (FQDN) from which the CDN-backed content is served. |

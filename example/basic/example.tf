@@ -7,7 +7,7 @@ provider "digitalocean" {
 ##------------------------------------------------
 module "spaces" {
   source        = "cypik/spaces/digitalocean"
-  version       = "1.0.1"
+  version       = "1.0.2"
   name          = "spaces1"
   environment   = "test"
   acl           = "private"
