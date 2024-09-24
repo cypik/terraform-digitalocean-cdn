@@ -27,3 +27,8 @@ output "custom_domain" {
   value       = var.custom_domain != null ? join("", digitalocean_cdn.main[*].custom_domain) : 0
   description = "The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint."
 }
+
+output "certificate_id" {
+  value       = digitalocean_cdn.main[*].certificate_id != null ? join("", compact(digitalocean_cdn.main[*].certificate_id)) : "no_certificate"
+  description = "The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided."
+}
